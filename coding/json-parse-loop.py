@@ -51,7 +51,7 @@ spark_rooms_2={
     ]
 }
 
-print(type(spark_rooms_2))
+#print(type(spark_rooms_2))
 print("=======================================")
 print("We're in the Spark room names and activity part of the code now")
 print("=======================================")
@@ -60,7 +60,7 @@ for data in spark_rooms_2["items"]:
     print("The last activity in the room was on: " + data["lastActivity"])
     print("")
 
-spark_rooms={
+spark_rooms_3={
     "items": [
         {
             "id": "Y2lzY29zcGFyazovLVzL1JPT00vNDQ2NTIxZTAtZTk5Yi0xMWU2LWFmNjktM2JjOGZhOWE1dr",
@@ -80,4 +80,15 @@ spark_rooms={
     ]
 }
 
-### Write loop here to parse and print data
+#print(type(spark_rooms_3))
+print("=======================================")
+print("We're in the Spark room names, IDs, and locked part of the code now")
+print("=======================================")
+for data in spark_rooms_3["items"]:
+    print("The room name is \"" + data["title"] + "\"")
+    print("The ID of the room is: " + data["id"])
+    if data["isLocked"] == "false":
+        print("The room is unlocked")
+    else:
+        print("The room is locked")
+    print("")
